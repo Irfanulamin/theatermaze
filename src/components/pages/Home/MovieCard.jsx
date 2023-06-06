@@ -9,7 +9,7 @@ const MovieCard = ({ movie }) => {
   const notagSummary = show?.summary?.replace(/<\/?[^>]+(>|$)/g, "");
   const twentywordsSummary = notagSummary.substring(0, 80);
   return (
-    <div className="bg-white border border-slate-800 flex items-center">
+    <div className="bg-white border  flex items-center">
       <div>
         <img
           src={show?.image?.original}

@@ -8,8 +8,8 @@
 }
 
 .hero_section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../src/assets/1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../src/assets/3.jpg");
   background-size: cover;
   background-position: center center;
   height: 90vh;

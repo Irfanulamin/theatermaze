@@ -58,7 +58,8 @@ const SingleMovieDetails = () => {
             {show?.averageRuntime}
           </h3>
           <h3 className="text-xl text-red-700 font-bold">
-            <span className="text-black">Time:</span> {show?.schedule?.time}
+            <span className="text-black">Time:</span>{" "}
+            {show?.schedule?.time ? show?.schedule?.time : "Not Available"}
           </h3>
           <div className="flex items-center gap-3 pt-3">
             {show?.genres.map((genre, index) => (
@@ -130,18 +131,22 @@ const SingleMovieDetails = () => {
           </div>
           <p className="text-sm text-left py-2">{notagSummary}</p>
           <p className="text-lg font-semibold pb-2">
-            Time: <span className="text-red-700">{show?.schedule?.time}</span>
+            Time:{" "}
+            <span className="text-red-700">
+              {show?.schedule?.time ? show?.schedule?.time : "Not Available"}
+            </span>
           </p>
-
-          <div className="flex gap-3 items-center flex-grow">
-            {show?.schedule?.days.map((day) => (
-              <div>
-                <p className="text-red-700 border border-red-700 py-1 px-3 inline">
-                  {day}
-                </p>
-              </div>
-            ))}
-          </div>
+          {show?.schedule?.days && (
+            <div className="flex gap-3 items-center flex-grow">
+              {show?.schedule?.days.map((day) => (
+                <div>
+                  <p className="text-red-700 border border-red-700 py-1 px-3 inline">
+                    {day}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
           <div className="py-7 ">
             <button
               onClick={() => window.my_modal_5.showModal()}
