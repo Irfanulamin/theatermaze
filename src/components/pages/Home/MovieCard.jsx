@@ -29,8 +29,10 @@ const MovieCard = ({ movie }) => {
           <p className="text-red-700">No Ratings</p>
         )}
         <div className="flex items-center py-2 gap-2">
-          {show?.genres.map((genre) => (
-            <div className="badge badge-outline ">{genre}</div>
+          {show?.genres.map((genre, index) => (
+            <div className="badge badge-outline" key={index}>
+              {genre}
+            </div>
           ))}
         </div>
         <p className="text-sm">{twentywordsSummary}....</p>

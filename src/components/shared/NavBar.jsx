@@ -9,12 +9,6 @@ const NavBar = () => {
           Theater Maze
         </Link>
       </div>
-
-      <div className="navbar-end">
-        <a className="btn hover:bg-transparent hover:text-white btn-sm rounded-none">
-          Booked Movies
-        </a>
-      </div>
     </div>
   );
 };
