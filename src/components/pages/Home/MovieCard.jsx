@@ -2,6 +2,7 @@ import React from "react";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import { Link } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
   const { show } = movie;
@@ -33,9 +34,12 @@ const MovieCard = ({ movie }) => {
           ))}
         </div>
         <p className="text-sm">{twentywordsSummary}....</p>
-        <button className="btn w-1/2 mt-4  bg-red-700 text-white hover:bg-white hover:text-red-700 transation_custom border-none rounded-sm">
+        <Link
+          className="btn w-1/2 mt-4  bg-red-700 text-white hover:bg-white hover:text-red-700 transation_custom border-none rounded-sm"
+          to={`/movie/${show?.id}`}
+        >
           Show Details
-        </button>
+        </Link>
       </div>
     </div>
   );
