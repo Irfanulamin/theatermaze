@@ -71,7 +71,6 @@ const SingleMovieDetails = () => {
               </div>
             ))}
           </div>
-
           <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>
@@ -114,11 +113,11 @@ const SingleMovieDetails = () => {
           </div>
         </form>
       </dialog>
-      <div className="flex flex-col lg:flex-row justify-center gap-7 items-center p-4 md:p-11 lg:p-24">
+      <div className="flex flex-col lg:flex-row justify-center gap-7  items-center p-7 md:p-11 lg:p-24">
         <div>
           <img src={show?.image?.original} className="h-96 w-80 object-cover" />
         </div>
-        <div className="w-full lg:w-1/2">
+        <div className="w-full p-2">
           <div className="flex justify-center items-center">
             <div>
               <h2 className="text-4xl text-red-700 font-bold">{show?.name}</h2>

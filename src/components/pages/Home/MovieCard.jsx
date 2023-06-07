@@ -9,7 +9,7 @@ const MovieCard = ({ movie }) => {
   const notagSummary = show?.summary?.replace(/<\/?[^>]+(>|$)/g, "");
   const twentywordsSummary = notagSummary.substring(0, 80);
   return (
-    <div className="bg-white border  flex items-center">
+    <div className="bg-white border flex flex-col md:flex-row lg:flex-row items-center">
       <div>
         <img
           src={show?.image?.original}
@@ -18,7 +18,9 @@ const MovieCard = ({ movie }) => {
         />
       </div>
       <div className="p-4 pl-7">
-        <h2 className="text-4xl font-semibold  tracking-wide">{show?.name}</h2>
+        <h2 className="text-xl md:text-2xl lg:text-4xl font-semibold  tracking-wide">
+          {show?.name}
+        </h2>
         {show?.rating?.average ? (
           <Rating
             style={{ maxWidth: 150 }}
